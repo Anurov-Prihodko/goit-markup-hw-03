@@ -1,3 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
 :root {
   --text-font: 'Roboto', sans-serif;
   --text-main-color: #757575;
@@ -8,6 +34,7 @@
   --contacts-color: rgba(255, 255, 255, 0.6);
   --background-main: #2f303a;
   --background-team: #f5f4fa;
+  --border-work-examples: #eeeeee;
 }
 
 body {
@@ -35,8 +62,26 @@ li {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-head-color);
+  margin-bottom: 50px;
 }
 
+.container {
+  width: 1170px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+
+.border-btn {
+  border-radius: 4px;
+  border: 0px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.margin-blocks {
+  margin-bottom: 95px;
+}
 /* ======== REPEATING STYLES END ========= */
 
 /* ======== BLOCK LOGO ========= */
@@ -51,6 +96,8 @@ li {
 }
 
 .basement-logo {
+  display: inline-block;
+  margin-bottom: 20px;
   color: var(--white-color);
 }
 
@@ -88,6 +135,10 @@ li {
   color: var(--accent-color);
 }
 
+/* .header-main {
+  outline: 2px solid red;
+} */
+
 /* ======== BLOCK NAVIGATION END ========= */
 
 /* ======== BLOCK CONTACTS ========= */
@@ -113,30 +164,30 @@ li {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.364;
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
+  margin-bottom: 30px;
 }
 
 .hero-btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  display: flex;
   align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
-  border: 0px;
-  background: var(--accent-color);
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
-  border-radius: 4px;
-  cursor: pointer;
   color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px 32px;
 }
 
 .hero {
-  background: var(--background-main);
+  background-color: var(--background-main);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
 }
 
 /* ======== HERO BLOCK END ========= */
@@ -154,6 +205,7 @@ li {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-head-color);
+  margin-bottom: 10px;
 }
 
 .features-text {
@@ -163,7 +215,18 @@ li {
   letter-spacing: 0.03em;
 }
 
-/* ======== FEATURES BLOCK END ========= */
+/* .features {
+  background-color: teal;
+} */
+/* =====  === FEATURES BLOCK END ========= */
+
+/* ======== WHAT WE DO BLOCK ========= */
+
+/* .what-we-do {
+  background-color: teal;
+} */
+
+/* ======== WHAT WE DO BLOCK END ========= */
 
 /* ======== OUR TEAM BLOCK ========= */
 
@@ -171,24 +234,39 @@ li {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.188;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-head-color);
+  margin-bottom: 10px;
 }
 
 .our-team-prof {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.188;
-  text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-main-color);
+  padding-bottom: 30px;
 }
 
 .our-team {
-  color: var(--background-team);
+  text-align: center;
+  padding: 95px 0;
+  background-color: var(--background-team);
 }
 
+.our-team-img {
+  margin-bottom: 30px;
+}
+
+.our-team-item {
+  width: 270px;
+  height: 368px;
+  /* display: inline-block; */
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 /* ======== OUR TEAM BLOCK END ========= */
 
 /* ======== FOOTER ========= */
@@ -201,6 +279,7 @@ li {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--white-color);
+  margin-bottom: 9px;
 }
 
 .basement-contacts-link {
@@ -222,7 +301,9 @@ li {
 }
 
 .basement {
-  background: var(--background-main);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-main);
 }
 
 /* ======== FOOTER END ========= */
@@ -233,19 +314,20 @@ li {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
-  text-align: center;
   letter-spacing: 0.03em;
-  border-radius: 4px;
-  border: 0px;
-  cursor: pointer;
   background: var(--background-team);
   color: var(--text-head-color);
+  padding: 6px 22px;
 }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
   color: var(--white-color);
-  background: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.portfolio-bt-item {
+  margin-bottom: 50px;
 }
 
 /* ======== PORTFOLIO LINK BLOCK END ========= */
@@ -266,5 +348,15 @@ li {
   line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--text-main-color);
+}
+
+.description-foto {
+  padding: 20px 24px;
+}
+
+.work-examples-item {
+  border: 1px solid var(--border-work-examples);
+  height: 404px;
+  width: 370px;
 }
 /* ======== WORK EXAMPLES BLOCK END ========= */
