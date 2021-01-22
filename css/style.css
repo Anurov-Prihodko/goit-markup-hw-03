@@ -77,7 +77,7 @@ body {
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 .border-btn {
