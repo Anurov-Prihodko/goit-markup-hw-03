@@ -87,6 +87,13 @@ body {
   text-align: center;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 /* ======== REPEATING STYLES END ========= */
 
 /* ======== BLOCK LOGO ========= */
@@ -166,7 +173,8 @@ body {
   margin-right: 50px;
 }
 
-.site-nav-list {
+.site-nav-link {
+  display: flex;
   padding-top: 33px;
   padding-bottom: 33px;
 }
@@ -208,10 +216,13 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
+  margin-bottom: 30px;
+}
+
+.hero-container {
   max-width: 695px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 30px;
 }
 
 .hero-btn {
@@ -376,7 +387,7 @@ body {
   background-color: var(--background-main);
 }
 
-.basement-contacts-item {
+.basement-contacts-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -468,7 +479,7 @@ body {
   margin-bottom: 0;
 }
 
-/* !alternative */
+/* alternative */
 
 /* .work-examples-item:not(:nth-child(3n)) {
   margin-right: 30px;
